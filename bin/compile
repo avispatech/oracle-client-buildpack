@@ -7,6 +7,10 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 CLIENT_BUILD_DIR=$BUILD_DIR/.oracle-build
 
+apt-get install libaio1
+
+echo "-----> libaio1 Installed"
+
 echo "-----> Installing Oracle Client"
 
 mkdir -p $CLIENT_BUILD_DIR
@@ -36,7 +40,3 @@ fi
 cp $BP_DIR/profile/* $BUILD_DIR/.profile.d/
 
 echo "-----> Oracle Client Installed"
-
-apt-get install libaio1
-
-echo "-----> libaio1 Installed"
