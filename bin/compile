@@ -36,3 +36,7 @@ fi
 cp $BP_DIR/profile/* $BUILD_DIR/.profile.d/
 
 echo "-----> Oracle Client Installed"
+
+apt-get install libaio1
+
+echo "-----> libaio1 Installed"
